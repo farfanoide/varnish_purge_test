@@ -1,0 +1,14 @@
+<form id="routes-form" action="/purge" method="POST">
+  <select id="routes" name="path">
+    <% @routes.each do |route| %>
+        <option value="<%= route[:path] %>"><%= route[:name] %></option>
+    <% end %>
+    <input type="submit" value="PURGE">
+  </select>
+</form>
+<script type="text/javascript">
+// var form = $('#routes-form');
+// $(document).on('change', '#routes', function() {
+//     form.attr('action', $('option:selected', this).val());
+// });
+</script>
